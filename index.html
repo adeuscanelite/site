@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adeus Canelite | Fortalece a canela e volta a treinar sem dor</title>
+<meta name="description" content="O programa de exercícios curtos que fortalece a canela até a dor deixar de voltar. Dez minutos por dia, em casa. Pagas uma vez.">
+<meta name="theme-color" content="#0d3b32">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:site_name" content="Adeus Canelite">
+<meta property="og:title" content="Não consegues treinar a sério por causa da canelite?">
+<meta property="og:description" content="A dor não passa com descanso: passa quando a canela fica forte. Dez minutos por dia, €19,90 uma vez só.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  /* paleta propria: verde-pinho profundo + laranja de alerta. Nao e a do painel nem a da 004 */
+  --pinho:#0d3b32; --pinho-esc:#082722; --pinho-prof:#051a17;
+  --menta:#e8f3ef; --menta2:#f4faf8; --papel:#fbfdfc;
+  --tinta:#14201d; --cinza:#5d6b67; --linha:#dfeae6;
+  --lar:#e2703a; --lar-esc:#c25a2a;
+  --verde:#1e7d4f; --verde-bg:#e8f5ee;
+  --verm:#b3261e; --verm-bg:#fdeceb;
+  --r-sm:10px; --r:16px; --r-lg:26px;
+  --s0:clamp(15.5px,15px + .2vw,17px);
+  --s2:clamp(20px,18px + 1.1vw,25px);
+  --s4:clamp(29px,24px + 2.6vw,42px);
+  --s5:clamp(34px,27px + 3.4vw,52px);
+  --serif:ui-serif,Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--papel);color:var(--tinta);
+  font-size:var(--s0);line-height:1.62;overflow-x:hidden}
+img{max-width:100%;display:block}
+.w{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:54px 0}
+h1,h2,h3{line-height:1.14;letter-spacing:-.6px;font-weight:800}
+h2{font-size:var(--s4);margin-bottom:14px}
+h3{font-size:var(--s2)}
+.serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.5px}
+.olho{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--lar);margin-bottom:9px}
+.centro{text-align:center}
+.sub{color:var(--cinza);max-width:60ch}
+.centro .sub{margin-left:auto;margin-right:auto}
+
+/* ---------------- HERO ---------------- */
+.hero{position:relative;background:var(--pinho-prof);
+  color:#fff;overflow:hidden;padding:52px 0 46px}
+.hero-img{position:absolute;inset:0;z-index:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:72% 40%}
+.hero-img:after{content:'';position:absolute;inset:0;
+  background:linear-gradient(100deg,
+    var(--pinho-prof) 0%, rgba(5,26,23,.96) 34%, rgba(8,39,34,.80) 52%,
+    rgba(8,39,34,.45) 70%, rgba(8,39,34,.30) 100%)}
+.hero:before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.5;z-index:1;
+  background-image:radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size:4px 4px}
+.hero .w{position:relative;z-index:2}
+.chapeu{font-size:11.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  color:#8fd4bf;margin-bottom:16px}
+.hero h1{font-size:var(--s5);margin-bottom:16px;max-width:30ch;text-wrap:balance}
+.hero h1 .serif{display:block;margin-top:4px;font-size:.88em}
+.hero h1 .serif{color:#ffd9c4;font-weight:400}
+.hero .lead{max-width:46ch}
+.hero .lead{font-size:clamp(17px,16px + .5vw,20px);color:#d3e7e0;max-width:52ch;margin-bottom:26px}
+.selos{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}
+.selo{font-size:12.5px;font-weight:700;background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.18);padding:6px 13px;border-radius:100px;color:#eaf5f1}
+
+/* ---------------- BOTAO ---------------- */
+.btn{display:inline-block;background:var(--lar);color:#fff;font-weight:800;
+  font-size:17px;padding:17px 34px;border-radius:100px;text-decoration:none;
+  box-shadow:0 10px 26px -10px rgba(226,112,58,.75);transition:transform .15s, background .15s;
+  border:none;cursor:pointer;text-align:center}
+.btn:hover{background:var(--lar-esc);transform:translateY(-1px)}
+.btn-gr{display:block;width:100%;max-width:460px;margin:0 auto;font-size:18px;padding:19px 24px}
+.btn small{display:block;font-weight:600;font-size:13px;opacity:.9;margin-top:3px;letter-spacing:.2px}
+.sob-btn{font-size:13.5px;color:var(--cinza);margin-top:12px}
+.hero .sob-btn{color:#a9c7be}
+
+/* ---------------- CICLO (a peca central) ---------------- */
+.ciclo{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:26px}
+.passo{background:#fff;border:1px solid var(--linha);border-left:3px solid var(--verm);
+  border-radius:var(--r);padding:17px 19px;position:relative}
+.passo .n{font-family:var(--serif);font-size:13px;color:var(--verm);font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;display:block}
+.passo p{font-size:15.5px;line-height:1.5}
+.fecho-ciclo{margin-top:24px;background:var(--verm-bg);border:1px solid #f3c9c5;
+  border-radius:var(--r);padding:20px 22px;font-size:17px;font-weight:600}
+
+/* ---------------- LISTAS ---------------- */
+.lista{list-style:none;display:grid;gap:11px;margin-top:18px}
+.lista li{position:relative;padding-left:31px;font-size:16.5px}
+.lista li:before{content:'';position:absolute;left:0;top:7px;width:19px;height:19px;
+  border-radius:50%;background:var(--verde-bg);
+  box-shadow:inset 0 0 0 1.5px var(--verde)}
+.lista li:after{content:'';position:absolute;left:6px;top:12px;width:7px;height:4px;
+  border-left:2px solid var(--verde);border-bottom:2px solid var(--verde);
+  transform:rotate(-45deg)}
+
+/* ---------------- FOTO EM COLUNA ---------------- */
+.duas-col{display:grid;gap:30px;grid-template-columns:1.2fr .8fr;align-items:center;margin-top:18px}
+.duas-col .lista{margin-top:0}
+.foto{margin:0;border-radius:var(--r-lg);overflow:hidden;box-shadow:0 18px 40px -22px rgba(5,26,23,.55)}
+.foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 38%;display:block}
+@media (max-width:760px){.duas-col{grid-template-columns:1fr;gap:22px}
+  /* a foto do jogador e vertical: no telemovel mostra-se inteira, sem cortar */
+  .foto img{aspect-ratio:auto;height:auto;object-fit:contain;background:var(--menta)}}
+
+/* ---------------- PILARES ---------------- */
+.pilares{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:24px}
+.pilar{background:#fff;border:1px solid var(--linha);border-radius:var(--r-lg);padding:24px 22px}
+.pilar .num{font-family:var(--serif);font-size:40px;line-height:1;color:var(--lar);
+  font-style:italic;margin-bottom:10px;display:block}
+.pilar h3{margin-bottom:8px}
+.pilar p{font-size:15.5px;color:var(--cinza)}
+
+/* ---------------- O DEPOIS ---------------- */
+.depois{margin-top:26px;background:var(--verde-bg);border:1px solid #bfe3d0;
+  border-radius:var(--r-lg);padding:24px 26px}
+.depois p{font-size:17px;max-width:70ch}
+
+/* ---------------- PACOTE ---------------- */
+.pacote{background:#fff;border:1px solid var(--linha);border-radius:var(--r-lg);
+  padding:8px 22px;max-width:620px;margin:22px auto 0}
+.item{display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+  padding:15px 0;border-bottom:1px solid var(--linha)}
+.item:last-child{border-bottom:none}
+.item .txt{font-size:16px;font-weight:600}
+.item .txt span{display:block;font-size:14px;font-weight:400;color:var(--cinza);margin-top:2px}
+.item .val{font-size:15px;color:var(--cinza);text-decoration:line-through;white-space:nowrap}
+.soma{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:17px 22px;margin:0 auto;max-width:620px;background:var(--menta);
+  border-radius:0 0 var(--r-lg) var(--r-lg);font-weight:800;font-size:17px}
+.soma .val{text-decoration:line-through;color:var(--cinza);font-weight:600}
+
+/* ---------------- PRECO ---------------- */
+.caixa-preco{background:linear-gradient(168deg,var(--pinho) 0%,var(--pinho-prof) 100%);
+  color:#fff;border-radius:var(--r-lg);padding:38px 26px;text-align:center;margin-top:26px}
+.de{font-size:16px;color:#a9c7be;text-decoration:line-through}
+.por{font-size:clamp(44px,34px + 4vw,66px);font-weight:800;letter-spacing:-2px;line-height:1.05;margin:6px 0}
+.por span{font-size:.42em;font-weight:700;letter-spacing:-.5px}
+.uma-vez{font-size:16px;color:#ffd9c4;font-weight:700;margin-bottom:24px}
+
+/* ---------------- GARANTIA ---------------- */
+.garantia{background:var(--menta2);border:1px solid var(--linha);border-radius:var(--r-lg);
+  padding:26px 24px;display:flex;gap:18px;align-items:flex-start;max-width:760px;margin:0 auto}
+.garantia .ic{flex-shrink:0;width:46px;height:46px;border-radius:50%;background:var(--verde-bg);
+  display:grid;place-items:center;font-size:22px}
+.garantia p{font-size:15.5px;color:var(--cinza)}
+
+/* ---------------- DOIS CAMINHOS ---------------- */
+.caminhos{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:24px}
+.cam{border-radius:var(--r-lg);padding:26px 24px;border:1px solid var(--linha);background:#fff}
+.cam.mau{background:var(--verm-bg);border-color:#f3c9c5}
+.cam.bom{background:var(--verde-bg);border-color:#bfe3d0}
+.cam h3{margin-bottom:12px;font-size:20px}
+.cam ul{list-style:none;display:grid;gap:9px}
+.cam li{font-size:15.5px;padding-left:24px;position:relative;line-height:1.5}
+.cam.mau li:before{content:'✕';position:absolute;left:0;color:var(--verm);font-weight:800}
+.cam.bom li:before{content:'✓';position:absolute;left:0;color:var(--verde);font-weight:800}
+
+/* ---------------- FAQ ---------------- */
+.faq{max-width:760px;margin:22px auto 0}
+details{background:#fff;border:1px solid var(--linha);border-radius:var(--r);margin-bottom:11px;overflow:hidden}
+summary{cursor:pointer;padding:18px 20px;font-weight:700;font-size:16.5px;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary:after{content:'+';color:var(--lar);font-size:24px;font-weight:400;line-height:1;flex-shrink:0}
+details[open] summary:after{content:'–'}
+details .resp{padding:0 20px 20px;color:var(--cinza);font-size:15.5px}
+
+/* ---------------- FIM ---------------- */
+.fim{background:linear-gradient(168deg,var(--pinho) 0%,var(--pinho-prof) 100%);color:#fff;text-align:center}
+.fim h2{margin-bottom:14px}
+.fim .sub{color:#d3e7e0;margin-bottom:28px}
+.ps{max-width:620px;margin:30px auto 0;text-align:left;font-size:15.5px;color:#c3ded5}
+.ps p{margin-bottom:12px}
+.ps b{color:#fff}
+
+/* ---------------- COOKIES ---------------- */
+.cook{position:fixed;left:14px;right:14px;bottom:14px;z-index:80;display:none;
+  background:#fff;border:1px solid var(--linha);border-radius:var(--r-lg);
+  box-shadow:0 20px 50px -20px rgba(5,26,23,.45);
+  padding:20px 22px;max-width:560px;margin:0 auto}
+.cook.on{display:block}
+.cook p{font-size:14.5px;color:var(--cinza);margin-bottom:14px;line-height:1.5}
+.cook p b{color:var(--tinta)}
+.cook a{color:var(--lar)}
+.cook .acoes{display:flex;gap:9px;flex-wrap:wrap}
+.cook button{font-family:inherit;font-size:14.5px;font-weight:700;padding:11px 20px;
+  border-radius:100px;border:none;cursor:pointer;flex:1;min-width:130px}
+.cook .sim{background:var(--lar);color:#fff}
+.cook .nao{background:var(--menta);color:var(--tinta);border:1px solid var(--linha)}
+
+/* ---------------- BARRA FIXA DE COMPRA (so telemovel) ---------------- */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(5,26,23,.94);backdrop-filter:blur(10px);
+  border-top:1px solid rgba(255,255,255,.1);
+  transform:translateY(110%);transition:transform .26s ease;
+  align-items:center;gap:12px}
+.barra.on{transform:translateY(0)}
+.barra .txt{flex:1;min-width:0;line-height:1.25}
+.barra .p{font-weight:800;font-size:19px;color:#fff;display:block}
+.barra .p s{font-weight:600;font-size:13px;color:#8fa8a1;margin-right:6px}
+.barra .g{font-size:11.5px;color:#a9c7be;display:block;margin-top:1px}
+.barra .btn{flex-shrink:0;font-size:14px;padding:13px 16px;box-shadow:none;
+  line-height:1.2;max-width:48vw;letter-spacing:-.2px}
+.barra .g{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:760px){
+  .barra{display:flex}
+  /* espaco para a barra nao tapar o fim da pagina */
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+}
+@media (prefers-reduced-motion:reduce){ .barra{transition:none} }
+
+footer{background:var(--pinho-prof);color:#86a9a0;padding:34px 0;font-size:13.5px;text-align:center}
+footer a{color:#b6d4cb}
+footer p{margin-bottom:8px}
+
+@media (max-width:760px){
+  section{padding:42px 0}
+  .garantia{flex-direction:column;gap:14px}
+
+  /* No telemovel a foto NAO fica por tras do texto: fica por cima, inteira e a cores,
+     e o texto vem a seguir sobre o verde. Assim ve-se a foto e le-se o texto. */
+  .hero{padding:0 0 40px;display:flex;flex-direction:column}
+  .hero-img{position:relative;inset:auto;width:100%;height:auto;order:-1}
+  .hero-img img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:62% 36%}
+  .hero-img:after{background:linear-gradient(180deg,
+    rgba(5,26,23,0) 62%, rgba(5,26,23,.72) 86%, var(--pinho-prof) 100%)}
+  .hero .w{padding-top:20px}
+  .hero h1{max-width:none}
+  .hero .lead{font-size:16.5px;margin-bottom:20px}
+  .selos{gap:7px;margin-bottom:22px}
+  .selo{font-size:12px;padding:5px 11px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-img"><img src="img/hero-corredor.jpg" alt="Corredor parado num parque, dobrado a segurar a canela"></div>
+  <div class="w">
+    <h1>Não consegues treinar a sério por causa da canelite? <span class="serif">Fortalece a canela em 10 minutos por dia</span></h1>
+    <p class="lead">A dor não passa com descanso: passa quando a canela fica forte o
+       suficiente para aguentar o impacto. Exercícios curtos, em casa,
+       mais o plano para voltares a correr.</p>
+    <div class="selos">
+      <span class="selo">Em casa</span>
+      <span class="selo">Corrida e futebol</span>
+      <span class="selo">Pagas uma vez</span>
+    </div>
+    <a href="#comprar" class="btn">QUERO VOLTAR A TREINAR SEM DOR</a>
+    <p class="sob-btn">€19,90, pagamento único. Garantia de 14 dias.</p>
+  </div>
+</header>
+
+<!-- ============ O CICLO (a peca central) ============ -->
+<section>
+  <div class="w">
+    <div class="olho">Reconheces isto?</div>
+    <h2>O ciclo que já <span class="serif">te venceu tantas vezes</span></h2>
+    <p class="sub">Se leste os cinco e disseste "sou eu" em pelo menos três, esta página
+       foi escrita para ti.</p>
+
+    <div class="ciclo">
+      <div class="passo">
+        <span class="n">Passo 1</span>
+        <p>Voltas a treinar cheio de vontade. Aos poucos minutos, a canela começa a arder.</p>
+      </div>
+      <div class="passo">
+        <span class="n">Passo 2</span>
+        <p>Paras uma semana. Gelo, comprimido, descanso. A dor passa e tu pensas que já está.</p>
+      </div>
+      <div class="passo">
+        <span class="n">Passo 3</span>
+        <p>Voltas a correr. À primeira ou à segunda saída, ela está lá outra vez, no mesmo sítio.</p>
+      </div>
+      <div class="passo">
+        <span class="n">Passo 4</span>
+        <p>Compras ténis novos, mudas a passada, procuras vídeos. Alguma coisa melhora, mas a canela volta.</p>
+      </div>
+      <div class="passo">
+        <span class="n">Passo 5</span>
+        <p>Começas a espaçar os treinos. Depois deixas de marcar. E a pouco e pouco deixas de ir.</p>
+      </div>
+    </div>
+
+    <div class="fecho-ciclo">
+      E fica sempre a mesma pergunta na cabeça: <b>será que a corrida não é para mim?</b>
+      Não é isso. O teu fôlego aguenta, as pernas aguentam. Quem não aguenta é a canela,
+      porque nunca ninguém a pôs a trabalhar para o que lhe estás a pedir.
+    </div>
+  </div>
+</section>
+
+<!-- ============ A VIRADA ============ -->
+<section style="background:var(--menta2);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)">
+  <div class="w">
+    <div class="olho">O que está mesmo a acontecer</div>
+    <h2>A culpa não é tua. <span class="serif">É da carga.</span></h2>
+    <p class="sub" style="font-size:17px;max-width:66ch">
+      A canelite aparece quando pedes ao osso e ao músculo da perna mais do que eles estão
+      preparados para aguentar. Não é fraqueza, nem falta de jeito, nem idade. É contas:
+      <b>carga a mais, preparação a menos.</b></p>
+    <p class="sub" style="font-size:17px;max-width:66ch;margin-top:14px">
+      Por isso descansar alivia mas não resolve. O descanso tira a carga, e é por isso que a
+      dor passa. Só que, quando voltas, a canela continua exatamente tão despreparada como
+      estava, e a carga volta toda de uma vez. <b>É o mesmo ciclo, a começar outra vez.</b></p>
+    <p class="sub" style="font-size:17px;max-width:66ch;margin-top:14px">
+      O que muda o jogo não é parar mais tempo. É <b>fortalecer a canela enquanto vais
+      treinando</b>, com carga a subir aos poucos, até ela aguentar o impacto sem se
+      queixar. <b>A dor não se combate de frente: ela vai-se embora sozinha quando a perna
+      fica forte o suficiente para o que lhe pedes.</b></p>
+  </div>
+</section>
+
+<!-- ============ OS 3 PILARES ============ -->
+<section>
+  <div class="w">
+    <div class="olho">Como funciona</div>
+    <h2>Três coisas, feitas <span class="serif">pela ordem certa</span></h2>
+    <p class="sub">Não é uma lista de exercícios soltos da internet. É uma sequência, e a
+       ordem é que faz a diferença.</p>
+
+    <div class="pilares">
+      <div class="pilar">
+        <span class="num">1</span>
+        <h3>Aliviar</h3>
+        <p>Primeiro tira-se o fogo. Os movimentos da primeira fase baixam a irritação da zona
+           e dão-te alívio já nos primeiros dias, sem te obrigar a parar de treinar.</p>
+      </div>
+      <div class="pilar">
+        <span class="num">2</span>
+        <h3>Fortalecer</h3>
+        <p>Depois trabalha-se o que ninguém trabalha: o tibial, a barriga da perna e o pé.
+           São eles que absorvem o impacto que hoje vai todo para o osso. <b>É aqui que a
+           dor deixa de voltar.</b></p>
+      </div>
+      <div class="pilar">
+        <span class="num">3</span>
+        <h3>Voltar</h3>
+        <p>E depois o regresso. Quanto correr, a que ritmo e quando subir, semana a semana,
+           para não repetires o erro que trouxe a dor da primeira vez.</p>
+      </div>
+    </div>
+
+    <div class="depois">
+      <div class="olho" style="color:var(--verde)">Onde isto te deixa</div>
+      <p>Daqui a algumas semanas, sais de casa para correr e <b>não pensas na canela</b>.
+         Marcas o jogo de quinta sem fazer contas ao que vem depois. E quando aumentas o
+         ritmo, a perna acompanha em vez de travar. <b>Não porque a dor se calou, mas porque
+         deixou de ter motivo para aparecer.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM E ============ -->
+<section style="background:var(--menta2);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)">
+  <div class="w">
+    <div class="olho">Feito para ti</div>
+    <h2>É para ti, <span class="serif">se…</span></h2>
+
+    <div class="duas-col">
+      <ul class="lista">
+        <li>Corres, ou jogas à bola, e a canela dói sempre que aumentas o ritmo</li>
+        <li>Paras de correr por causa da dor, e não por estares cansado</li>
+        <li>Já tentaste gelo, descanso e ténis novos, e a dor voltou na mesma</li>
+        <li>Estiveste parado uns meses e, ao voltar, ela apareceu logo</li>
+        <li>Queres treinar e fazer os teus jogos sem passar a semana seguinte a coxear</li>
+        <li>Não tens tempo nem vontade de andar semanas a fio na fisioterapia</li>
+      </ul>
+      <figure class="foto">
+        <img src="img/futebol.jpg" alt="Jogador de futebol amador parado em campo a segurar a canela, enquanto o jogo continua" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O QUE LEVAS ============ -->
+<section>
+  <div class="w centro">
+    <div class="olho">O que levas</div>
+    <h2>Tudo o que precisas para <span class="serif">a canela deixar de mandar</span></h2>
+
+    <div class="pacote">
+      <div class="item">
+        <div class="txt">Adeus Canelite: o programa completo<span>As três fases, dia a dia, com vídeo curto de cada movimento</span></div>
+        <div class="val">€45</div>
+      </div>
+      <div class="item">
+        <div class="txt">Plano de regresso à corrida<span>Quanto correr e quando subir, semana a semana</span></div>
+        <div class="val">€59</div>
+      </div>
+      <div class="item">
+        <div class="txt">Rotina de 5 minutos antes do treino<span>O que fazer antes de sair de casa ou entrar em campo</span></div>
+        <div class="val">€20</div>
+      </div>
+      <div class="item">
+        <div class="txt">Guia dos sinais da perna<span>Que dor é normal, que dor é para parar, e como perceber a diferença</span></div>
+        <div class="val">€15</div>
+      </div>
+    </div>
+    <div class="soma"><span>Comprado à parte, em Portugal</span><span class="val">€139</span></div>
+    <p class="sub centro" style="font-size:14px;margin-top:14px">
+      Valores de referência do mercado português: uma sessão de fisioterapia custa €35 a €50,
+      e um plano de corrida acompanhado começa nos €59 por mês.</p>
+  </div>
+</section>
+
+<!-- ============ DOIS CAMINHOS ============ -->
+<section style="background:var(--menta2);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)">
+  <div class="w">
+    <div class="olho">A escolha</div>
+    <h2>A partir de hoje, <span class="serif">há dois caminhos</span></h2>
+
+    <div class="caminhos">
+      <div class="cam mau">
+        <h3>Continuar como está</h3>
+        <ul>
+          <li>Parar outra vez, e outra vez, sempre que ela aperta</li>
+          <li>Ver os treinos e os jogos a acontecer sem ti</li>
+          <li>Gastar em ténis e em consultas que aliviam mas não resolvem</li>
+          <li>Daqui a um ano, continuar a pensar que a corrida não é para ti</li>
+        </ul>
+      </div>
+      <div class="cam bom">
+        <h3>Fortalecer a canela</h3>
+        <ul>
+          <li>Menos de 10 minutos por dia, em casa</li>
+          <li>Saber exatamente o que fazer hoje, amanhã e para a semana</li>
+          <li>Voltar a correr com um plano, em vez de ir a ver no que dá</li>
+          <li>Marcar o próximo jogo sem pensar na canela</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRECO ============ -->
+<section id="comprar">
+  <div class="w">
+    <h2 class="centro">Custa menos <span class="serif">do que uma consulta</span></h2>
+    <p class="sub centro">Uma sessão de fisioterapia em Portugal fica entre €35 e €50. E não
+       é uma: são várias, semana após semana.</p>
+
+    <div class="caixa-preco">
+      <div class="de">€139</div>
+      <div class="por">€19<span>,90</span></div>
+      <div class="uma-vez">Pagas uma vez. É teu para sempre.</div>
+      <a href="#" class="btn btn-gr" id="cta-compra">QUERO VOLTAR A TREINAR SEM DOR</a>
+      <p class="sob-btn" style="color:#a9c7be;margin-top:16px">Garantia de 14 dias. Se não for para ti, devolvemos tudo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GARANTIA ============ -->
+<section style="padding-top:0">
+  <div class="w">
+    <div class="garantia">
+      <div class="ic">🛡️</div>
+      <div>
+        <div class="olho" style="margin-bottom:6px">Garantia de 14 dias</div>
+        <h3 style="margin-bottom:8px">Experimenta sem risco nenhum</h3>
+        <p>Tens 14 dias para ver tudo por dentro e começar. Se achares que não é para ti,
+           pedes o reembolso na mesma plataforma onde compraste e devolvemos o dinheiro todo.
+           Sem perguntas e sem complicação, como manda a lei.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section style="background:var(--menta2);border-top:1px solid var(--linha)">
+  <div class="w">
+    <div class="olho">Dúvidas</div>
+    <h2>Perguntas de quem <span class="serif">chegou até aqui</span></h2>
+
+    <div class="faq">
+      <details open>
+        <summary>Tenho de parar de correr enquanto faço isto?</summary>
+        <div class="resp">Não é esse o objetivo. O programa foi pensado para trabalhares a
+          canela enquanto continuas ativo, ajustando a carga em vez de a cortar de repente.
+          Se a dor estiver muito forte, a primeira fase diz-te o que fazer.</div>
+      </details>
+      <details>
+        <summary>Preciso de ginásio?</summary>
+        <div class="resp">Não. Faz-se tudo em casa. Alguns exercícios usam coisas simples,
+          como uma cadeira, um degrau ou um elástico de treino, que se compra por poucos
+          euros e dura anos.</div>
+      </details>
+      <details>
+        <summary>Quanto tempo demora por dia?</summary>
+        <div class="resp">Menos de 10 minutos. Foi feito de propósito para caber num dia
+          normal, porque um programa que demora meia hora acaba por não ser feito.</div>
+      </details>
+      <details>
+        <summary>Eu jogo à bola, não sou corredor. Serve para mim?</summary>
+        <div class="resp">Serve. A canela dói pela mesma razão: corridas, travagens e mudanças
+          de direção, sem a perna estar preparada para as aguentar. Quem joga à bola corre,
+          e muitas vezes corre pior, porque é tudo em arranques.</div>
+      </details>
+      <details>
+        <summary>Já fiz fisioterapia e voltou. Porque é que agora seria diferente?</summary>
+        <div class="resp">Porque a maior parte das pessoas para os exercícios quando a dor
+          passa, e a dor passa muito antes de a perna estar pronta. Aqui tens as três fases
+          até ao fim, incluindo a parte que quase toda a gente salta: o regresso à corrida
+          com carga a subir aos poucos.</div>
+      </details>
+      <details>
+        <summary>Isto substitui ir ao médico?</summary>
+        <div class="resp">Não substitui. Isto é treino, não é tratamento. Se tens dor muito
+          forte, dor a andar, inchaço ou dor que não passa com o descanso, vai a um
+          profissional de saúde antes de começares seja o que for.</div>
+      </details>
+      <details>
+        <summary>Como recebo? E como pago?</summary>
+        <div class="resp">Recebes o acesso por e-mail logo a seguir ao pagamento. Podes pagar
+          com MB WAY, Multibanco ou cartão.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIM ============ -->
+<section class="fim">
+  <div class="w">
+    <h2>Para a semana podes estar<br><span class="serif">a treinar outra vez</span></h2>
+    <p class="sub">Ou podes continuar exatamente onde estás hoje, à espera que ela passe sozinha.</p>
+    <a href="#" class="btn btn-gr" id="cta-fim">QUERO VOLTAR A TREINAR SEM DOR</a>
+    <p class="sob-btn" style="color:#a9c7be">€19,90, pagamento único. Garantia de 14 dias.</p>
+
+    <div class="ps">
+      <p><b>P.S.</b> O problema nunca foi o teu fôlego. Foi a canela ter ficado para trás
+         enquanto o resto do corpo evoluía. Isso muda-se com trabalho, não com descanso.</p>
+      <p><b>P.S. 2</b> Se estás a pensar "para o mês que vem trato disto", repara que é
+         exatamente esse o passo 5 do ciclo lá de cima.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="w">
+    <p><b>Adeus Canelite</b> · Programa de fortalecimento para quem corre e joga à bola</p>
+    <p>Isto é um programa de treino e não substitui avaliação médica.
+       Em caso de dor intensa ou persistente, consulta um profissional de saúde.</p>
+    <p><a href="termos.html">Termos</a> · <a href="privacidade.html">Privacidade</a></p>
+  </div>
+</footer>
+
+<!-- consentimento de cookies: o pixel SO dispara depois do sim (exigencia da risco-br) -->
+<div class="cook" id="cook" role="dialog" aria-label="Cookies">
+  <p>Usamos cookies para perceber se os nossos anúncios estão a chegar às pessoas certas.
+     <b>Só ativamos se aceitares.</b> A página funciona na mesma se recusares.
+     <a href="privacidade.html">Saber mais</a></p>
+  <div class="acoes">
+    <button class="nao" id="cook-nao">Recusar</button>
+    <button class="sim" id="cook-sim">Aceitar</button>
+  </div>
+</div>
+
+<!-- barra fixa de compra: aparece no telemovel quando nenhum CTA esta a ser visto -->
+<div class="barra" id="barra" aria-hidden="true">
+  <div class="txt">
+    <span class="p"><s>€139</s>€19,90</span>
+    <span class="g">Pagas uma vez. É teu para sempre.</span>
+  </div>
+  <a href="#comprar" class="btn">QUERO COMEÇAR</a>
+</div>
+
+<script>
+// ---- consentimento de cookies ----
+// O pixel do Meta NAO e carregado enquanto nao houver "sim". Isto e exigencia
+// da risco-br (seccao B.4): disparar o pixel antes do consentimento e irregular.
+(function(){
+  var cx = document.getElementById('cook');
+  if (!cx) return;
+  var CHAVE = 'ac_cookies';
+  var resposta = null;
+  try { resposta = localStorage.getItem(CHAVE); } catch(e) {}
+
+  function guarda(v){
+    try { localStorage.setItem(CHAVE, v); } catch(e) {}
+    cx.classList.remove('on');
+    if (v === 'sim') ligaPixel();
+  }
+
+  function ligaPixel(){
+    // Quando o pixel existir, o codigo dele entra AQUI dentro, e so aqui.
+    // Ate la nao ha nada a carregar, e por isso nada a consentir alem disto.
+    window.__consentimento = true;
+  }
+
+  if (resposta === 'sim') { ligaPixel(); }
+  else if (resposta !== 'nao') { setTimeout(function(){ cx.classList.add('on'); }, 900); }
+
+  document.getElementById('cook-sim').addEventListener('click', function(){ guarda('sim'); });
+  document.getElementById('cook-nao').addEventListener('click', function(){ guarda('nao'); });
+})();
+
+// ---- barra fixa de compra ----
+(function(){
+  var barra = document.getElementById('barra');
+  if (!barra) return;
+
+  // Os CTAs que contam: enquanto um deles estiver visivel, a barra fica escondida.
+  var ctas = [].slice.call(document.querySelectorAll('.hero .btn, #cta-compra, #cta-fim'));
+  if (!ctas.length) return;
+
+  // A barra aparece quando NENHUM dos CTAs esta na tela. Lido direto do
+  // getBoundingClientRect, que e mais previsivel que rootMargin de observer.
+  var pendente = false;
+
+  function algumVisivel(){
+    var h = window.innerHeight;
+    for (var i = 0; i < ctas.length; i++) {
+      var r = ctas[i].getBoundingClientRect();
+      // conta como visivel se pelo menos metade do botao esta dentro da tela
+      if (r.top < h - r.height / 2 && r.bottom > r.height / 2) return true;
+    }
+    return false;
+  }
+
+  function pinta(){
+    pendente = false;
+    var mostrar = !algumVisivel();
+    barra.classList.toggle('on', mostrar);
+    barra.setAttribute('aria-hidden', mostrar ? 'false' : 'true');
+  }
+
+  function agenda(){
+    if (pendente) return;
+    pendente = true;
+    requestAnimationFrame(pinta);
+  }
+
+  window.addEventListener('scroll', agenda, { passive: true });
+  window.addEventListener('resize', agenda, { passive: true });
+  pinta();
+})();
+</script>
+
+</body>
+</html>
