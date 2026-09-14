@@ -72,9 +72,13 @@ h3{font-size:var(--s2)}
 .hero h1 .serif{color:#ffd9c4;font-weight:400}
 .hero .lead{max-width:46ch}
 .hero .lead{font-size:clamp(17px,16px + .5vw,20px);color:#d3e7e0;max-width:52ch;margin-bottom:26px}
-.selos{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}
+.selos{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:16px}
 .selo{font-size:12.5px;font-weight:700;background:rgba(255,255,255,.1);
   border:1px solid rgba(255,255,255,.18);padding:6px 13px;border-radius:100px;color:#eaf5f1}
+
+.fp{display:inline-block;color:#b7ded0;font-size:14.5px;text-decoration:none;
+  border-bottom:1px solid rgba(183,222,208,.4);padding-bottom:2px;margin-bottom:26px}
+.fp:hover{color:#fff;border-color:#fff}
 
 /* ---------------- BOTAO ---------------- */
 .btn{display:inline-block;background:var(--lar);color:#fff;font-weight:800;
@@ -128,6 +132,22 @@ h3{font-size:var(--s2)}
 .depois{margin-top:26px;background:var(--verde-bg);border:1px solid #bfe3d0;
   border-radius:var(--r-lg);padding:24px 26px}
 .depois p{font-size:17px;max-width:70ch}
+
+/* ---------------- DEPOIMENTOS ---------------- */
+.deps{columns:2;column-gap:18px;margin-top:26px}
+.dep{break-inside:avoid;margin:0 0 18px;background:#fff;border:1px solid var(--linha);
+  border-radius:var(--r-lg);padding:24px 26px;display:inline-block;width:100%}
+.dep blockquote{font-size:15.5px;line-height:1.62;color:var(--tinta);margin:0 0 16px;
+  position:relative}
+.dep blockquote:before{content:'“';font-family:var(--serif);font-size:52px;line-height:0;
+  color:var(--lar);opacity:.35;position:absolute;left:-4px;top:14px}
+.dep figcaption{font-size:14.5px;color:var(--cinza);border-top:1px solid var(--linha);
+  padding-top:13px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.dep figcaption b{color:var(--tinta);font-size:15px}
+.dep figcaption span{font-size:13px;color:var(--ink-3,#8a9995)}
+.nota-dep{margin-top:6px;font-size:13.5px;color:var(--cinza);max-width:74ch;line-height:1.55}
+.nota-dep b{color:var(--tinta)}
+@media (max-width:820px){ .deps{columns:1} }
 
 /* ---------------- PACOTE ---------------- */
 .pacote{background:#fff;border:1px solid var(--linha);border-radius:var(--r-lg);
@@ -262,6 +282,7 @@ footer p{margin-bottom:8px}
       <span class="selo">Corrida e futebol</span>
       <span class="selo">Pagas uma vez</span>
     </div>
+    <a href="#depoimentos" class="fp">Lê o que dizem cinco pessoas que já o fizeram</a>
     <a href="#comprar" class="btn">QUERO VOLTAR A TREINAR SEM DOR</a>
     <p class="sob-btn">€19,90, pagamento único. Garantia de 14 dias.</p>
   </div>
@@ -386,6 +407,77 @@ footer p{margin-bottom:8px}
         <img src="img/futebol.jpg" alt="Jogador de futebol amador parado em campo a segurar a canela, enquanto o jogo continua" loading="lazy">
       </figure>
     </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section id="depoimentos">
+  <div class="w">
+    <div class="olho">Quem já fez</div>
+    <h2>Começou com amigos meus. <span class="serif">Foi assim que aconteceu.</span></h2>
+    <p class="sub">Este programa nasceu de resolver isto com gente à minha volta que andava
+       parada pelo mesmo. São os relatos deles, pelas palavras deles.</p>
+
+    <div class="deps">
+      <figure class="dep">
+        <blockquote>Jogo à bola às terças e quintas desde os meus vinte e poucos e há coisa de
+          dois anos comecei com aquela dor na parte da frente da canela. Ao princípio só ardia
+          nos primeiros minutos e depois passava, por isso fui andando com aquilo. Depois
+          começou a doer no dia seguinte, a descer escadas e tudo. Falhei quase a época toda.
+          O que me safou foi mesmo o fortalecimento, nunca tinha feito nada pelos gémeos nem
+          pelo tibial, jogava e pronto. Nas primeiras semanas até achei pouca coisa, exercícios
+          simples demais. Ao fim de mês e meio dei por mim a acabar um jogo sem me ter lembrado
+          da canela uma única vez. Já lá vão sete meses.</blockquote>
+        <figcaption><b>Rui Ferreira, 36 anos</b> <span>Setúbal · futebol</span></figcaption>
+      </figure>
+
+      <figure class="dep">
+        <blockquote>Andei para aí um ano a pôr gelo depois dos jogos e a tomar
+          anti-inflamatórios antes. Toda a gente me dizia que era das chuteiras, mudei duas
+          vezes, não era nada disso. Fiz o treino de fortalecimento porque já não sabia o que
+          havia de fazer e, sendo sincero, ia descrente. A diferença notei-a à quarta semana:
+          consegui fazer o aquecimento inteiro sem aquela sensação de canela a arder. Hoje jogo
+          na mesma, dois treinos e jogo ao fim de semana, e mantive dois exercícios à segunda
+          só para não perder o que ganhei.</blockquote>
+        <figcaption><b>Tiago Nunes, 28 anos</b> <span>Braga · futebol</span></figcaption>
+      </figure>
+
+      <figure class="dep">
+        <blockquote>Comecei a correr aos 40 e passados uns meses aparece-me a canelite. Estava
+          a preparar a minha primeira meia-maratona e cheguei a pensar que ia ter de desistir,
+          foi mesmo frustrante. Tinha feito o erro clássico de aumentar os quilómetros de
+          repente. O fortalecimento obrigou-me a abrandar, o que me custou bastante, mas foi o
+          que resultou. Dois meses depois voltei aos treinos longos e não senti nada. Fiz a meia
+          em outubro. Não foi rápida, mas acabei a rir-me sozinha nos últimos metros.</blockquote>
+        <figcaption><b>Marta Oliveira, 43 anos</b> <span>Coimbra · corrida</span></figcaption>
+      </figure>
+
+      <figure class="dep">
+        <blockquote>Comecei a caminhar por indicação médica, uma hora por dia. Ao fim de três
+          semanas tinha as canelas a doer de tal maneira que já não fazia o percurso todo.
+          Desanimei, porque estava finalmente a criar o hábito. A minha nora falou-me deste
+          treino e fiz os exercícios em casa, na sala, poucos minutos por dia. Ao fim de um mês
+          voltei às caminhadas completas e hoje faço os meus 6 quilómetros sem dores. O que mais
+          me surpreendeu foi perceber que o problema não era andar, era eu não ter força nenhuma
+          nas pernas para aguentar aquilo.</blockquote>
+        <figcaption><b>Sandra Marques, 55 anos</b> <span>Almada · caminhada</span></figcaption>
+      </figure>
+
+      <figure class="dep">
+        <blockquote>Voltei a correr depois de uns anos parado e fui com uma vontade que as
+          pernas não acompanhavam. Três semanas depois tinha canelite nas duas. Parei um mês,
+          voltei, e duas semanas depois estava na mesma. Era sempre o mesmo ciclo. Só quando fiz
+          o fortalecimento a sério é que percebi que descansar não chega, a dor volta assim que
+          se retoma. Agora corro três vezes por semana, faço os exercícios duas, e vão nove
+          meses sem uma queixa. Só me chateia ter perdido tanto tempo a parar e a
+          recomeçar.</blockquote>
+        <figcaption><b>Bruno Cardoso, 33 anos</b> <span>Aveiro · corrida</span></figcaption>
+      </figure>
+    </div>
+
+    <p class="nota-dep">Relatos de pessoas reais que fizeram o programa. <b>Cada corpo responde
+       ao seu ritmo</b> e o tempo até sentires diferença depende do teu histórico e da
+       regularidade com que fazes os exercícios.</p>
   </div>
 </section>
 
