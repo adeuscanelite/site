@@ -684,9 +684,28 @@ footer p{margin-bottom:8px}
   }
 
   function ligaPixel(){
-    // Quando o pixel existir, o codigo dele entra AQUI dentro, e so aqui.
-    // Ate la nao ha nada a carregar, e por isso nada a consentir alem disto.
+    // O pixel entra AQUI, e so aqui: nao ha nenhuma chamada ao Meta antes do
+    // "sim". Disparar antes do consentimento e o cenario que a ANPD sinaliza
+    // como irregular (risco-br, seccao B.4).
     window.__consentimento = true;
+    if (window.fbq) return;                 // ja carregado, nao repete
+
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '999895206404597');
+    fbq('track', 'PageView');
+
+    // Quem clica num CTA esta a ir para o checkout: e o sinal mais forte que
+    // esta pagina produz, e o que permite ler o funil antes de haver venda.
+    document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function(a){
+      a.addEventListener('click', function(){
+        try { fbq('track', 'InitiateCheckout', {value: 19.90, currency: 'EUR'}); } catch(e) {}
+      });
+    });
   }
 
   if (resposta === 'sim') { ligaPixel(); }
