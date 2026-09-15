@@ -152,13 +152,13 @@ h3{font-size:var(--s2)}
 /* ---------------- PACOTE ---------------- */
 .pacote{background:#fff;border:1px solid var(--linha);border-radius:var(--r-lg);
   padding:8px 22px;max-width:620px;margin:22px auto 0}
-.item{display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+.item{display:flex;justify-content:space-between;gap:14px;align-items:baseline;text-align:left;
   padding:15px 0;border-bottom:1px solid var(--linha)}
 .item:last-child{border-bottom:none}
 .item .txt{font-size:16px;font-weight:600}
 .item .txt span{display:block;font-size:14px;font-weight:400;color:var(--cinza);margin-top:2px}
 .item .val{font-size:15px;color:var(--cinza);text-decoration:line-through;white-space:nowrap}
-.soma{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+.soma{display:flex;justify-content:space-between;align-items:baseline;gap:14px;text-align:left;
   padding:17px 22px;margin:0 auto;max-width:620px;background:var(--menta);
   border-radius:0 0 var(--r-lg) var(--r-lg);font-weight:800;font-size:17px}
 .soma .val{text-decoration:line-through;color:var(--cinza);font-weight:600}
@@ -491,10 +491,6 @@ footer p{margin-bottom:8px}
         <div class="val">€45</div>
       </div>
       <div class="item">
-        <div class="txt">Plano de regresso à corrida<span>Quanto correr e quando subir, semana a semana</span></div>
-        <div class="val">€59</div>
-      </div>
-      <div class="item">
         <div class="txt">Rotina de 5 minutos antes do treino<span>O que fazer antes de sair de casa ou entrar em campo</span></div>
         <div class="val">€20</div>
       </div>
@@ -503,10 +499,10 @@ footer p{margin-bottom:8px}
         <div class="val">€15</div>
       </div>
     </div>
-    <div class="soma"><span>Comprado à parte, em Portugal</span><span class="val">€139</span></div>
+    <div class="soma"><span>Comprado à parte, em Portugal</span><span class="val">€80</span></div>
     <p class="sub centro" style="font-size:14px;margin-top:14px">
       Valores de referência do mercado português: uma sessão de fisioterapia custa €35 a €50,
-      e um plano de corrida acompanhado começa nos €59 por mês.</p>
+      e um guia de exercícios com acompanhamento não baixa dos €40.</p>
   </div>
 </section>
 
@@ -547,7 +543,7 @@ footer p{margin-bottom:8px}
        é uma: são várias, semana após semana.</p>
 
     <div class="caixa-preco">
-      <div class="de">€139</div>
+      <div class="de">€80</div>
       <div class="por">€19<span>,90</span></div>
       <div class="uma-vez">Pagas uma vez. É teu para sempre.</div>
       <a href="https://pay.hotmart.com/V107614456Q?checkoutMode=10" class="btn btn-gr" id="cta-compra">QUERO VOLTAR A TREINAR SEM DOR</a>
@@ -664,7 +660,7 @@ footer p{margin-bottom:8px}
 <!-- barra fixa de compra: aparece no telemovel quando nenhum CTA esta a ser visto -->
 <div class="barra" id="barra" aria-hidden="true">
   <div class="txt">
-    <span class="p"><s>€139</s>€19,90</span>
+    <span class="p"><s>€80</s>€19,90</span>
     <span class="g">Pagas uma vez. É teu para sempre.</span>
   </div>
   <a href="https://pay.hotmart.com/V107614456Q?checkoutMode=10" class="btn" id="cta-barra">QUERO COMEÇAR</a>
